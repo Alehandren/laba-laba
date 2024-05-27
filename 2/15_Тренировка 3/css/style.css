@@ -1,0 +1,134 @@
+﻿body {
+    background-color: black;
+}
+
+.animation_one_container {
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    transform: translate(-50%, -50%);
+    width: 470px;
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation_one {
+    border-radius: 50%;
+    position: absolute;
+    animation: animation_one_anim 5s ease-in-out infinite;
+}
+
+    .animation_one:nth-child(1) {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to left, rgb(4, 255, 0), rgb(8, 62, 188));
+        animation-delay: 0s;
+        box-shadow: 0px 0px 10px 10px rgba(31, 214, 227, 0.4);
+    }
+
+        .animation_one:nth-child(1):checked {
+            box-shadow: 0px 0px 10px 10px rgba(31, 214, 227, 0.4);
+        }
+
+.circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background: #333;
+    position: absolute;
+    left: 140px;
+    top: 140px;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes animation_one_anim {
+    0% {
+        left: calc(50% - 30px);
+        top: calc(50% - 30px);
+    }
+
+    25% {
+        left: calc(50% - 30px + 7.5px);
+        top: calc(50% - 30px + 7.5px);
+    }
+
+    50% {
+        left: calc(50% - 30px + 21px);
+        top: calc(50% - 30px + 21px);
+    }
+
+    75% {
+        left: calc(50% - 30px + 7.5px);
+        top: calc(50% - 30px + 7.5px);
+    }
+
+    100% {
+        left: calc(50% - 30px);
+        top: calc(50% - 30px);
+    }
+
+    45%, 55% {
+        animation-play-state: paused;
+    }
+
+    52.5%, 57.5% {
+        animation-play-state: running;
+    }
+}
+
+.animation_two_container {
+    position: relative;
+    width: 600px;
+    left: 20%;
+    .animation_two
+
+{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 5px solid transparent;
+    border-top-color: #01e8dc;
+    margin-top: 20px;
+    border-radius: 50%;
+    animation: animation_two_anim 1s linear infinite;
+    &:before, &:after
+
+{
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+    border-radius: 50%;
+}
+
+&:before {
+    border-top-color: #01e8dc;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    animation: animation_two_anim 3s linear infinite;
+}
+
+&:after {
+    border-top-color: #FFFBFE;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    animation: animation_two_anim 4s linear infinite;
+}
+
+}
+}
+
+@keyframes animation_two_anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

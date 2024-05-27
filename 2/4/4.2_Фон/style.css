@@ -1,0 +1,11 @@
+﻿.fon_one {
+    background: url("img/mosaic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fon_two {
+    background: url("img/mosaic.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+}
